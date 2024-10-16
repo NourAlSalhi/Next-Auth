@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Navbar from "./components/Navbar";
 import localFont from "next/font/local";
 import "./globals.css";
 
@@ -28,7 +29,10 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        {children}
+        <Navbar />
+        <main className="flex justify-center items-start p-6 min-h-screen">
+          {children}
+        </main>
       </body>
     </html>
   );
